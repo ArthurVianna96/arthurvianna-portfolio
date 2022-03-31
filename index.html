@@ -4,49 +4,196 @@
     <meta charset="UTF-8">
     <title>Arthur Vianna</title>
     <link rel="icon" type="image/x-icon" href="foto_arthur_vianna.jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            font-size: 18px;
+            font-family: sans-serif;
+
+            text-decoration: none;
+            color: #e5e5e5;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-color: #14213d;
+            margin: 0 auto;
+        }
+        header{
+            padding: 0 20px;
+            background-color: #fca311;
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            width: 100%;
+        }
+        #navbar{
+            list-style-type: none;
+
+            width: 100%;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        #navbar li {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .navbar-item{
+            padding: 20px 0;
+            color: #000000;
+            margin-right: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            position: relative;
+            transition: all ease 300ms;
+        }
+        .navbar-item::after{
+            content: ".";
+            color: transparent;
+            background-color: #14213d;
+            width: 0%;
+            height: 2px;
+            position: absolute;
+            bottom: 5px;
+            transition: all ease 300ms;
+        }
+        .navbar-item:hover{
+            cursor: pointer;
+            opacity: 0.8;
+        }
+        .navbar-item:hover::after{
+            width: 100%;
+        }
+        #title{
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            padding-top: 4rem;
+            margin-bottom: 3rem;
+        }
+        h1 {
+            font-family: Verdana, Tahoma;
+            font-size: 1.8rem;
+            text-align: center;
+
+            margin-bottom: 2rem;
+        }
+        #avatar{
+            height: 300px;
+            border-radius: 50%;
+            border: 6px solid #fca311;
+        }
+        h2{
+            font-size: 1.6rem;
+            font-weight: lighter;
+            display: flex;
+            align-items: center;
+
+            margin-top: 2rem;
+        }
+        #trybe-logo{
+            height: 30px;
+            margin-left: 0.8rem;
+        }
+        #description, #skills, #related-links{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: justify;
+            padding: 0 5%;
+            min-height: 30vh;
+        }
+        h3{
+            font-size: 1.4rem;
+            margin-bottom: 1.3rem;
+        }
+        .related-links-list{
+            list-style-type: none;
+            transition: all ease 300ms;
+        }
+        .related-links-list li {
+            transition: all ease 300ms;
+        }
+        .related-links-list li:hover{
+            transform: scale(1.05) translateX(2%);
+        }
+        .link-button{
+            background-color: #e5e5e5;
+            padding: 10px 15px;
+            color: #14213d;
+            border-radius: 5px;
+            transition: all ease 300ms;
+        }
+        .link-button:hover{
+            opacity: 0.85;
+        }
+        footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 0;
+            margin-top: 3rem;
+            background-color: #fca311;
+        }
+        footer > p {
+            color: #000000;
+        }
+    </style>
 </head>
 <body>
-    <section>
-        <h2>Sumário</h2>
-        <ol>
-            <li><a href="#header">Arthur Vianna</a></li>
-            <li><a href="#description">Uma Breve Descrição</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#related-links">Links Relacionados</a></li>
-        </ol>
-        <hr/>
+    <header>
+        <ul id="navbar">
+            <li ><a class="navbar-item" href="#title">Arthur Vianna</a></li>
+            <li ><a class="navbar-item" href="#description">Uma Breve Descrição</a></li>
+            <li ><a class="navbar-item" href="#skills">Habilidades</a></li>
+            <li ><a class="navbar-item" href="#related-links">Links Relacionados</a></li>
+        </ul>
+    </header>
+    <section id="title">
+        <h1>Arthur Pedrosa Vianna</h1>
+        <img src="foto_arthur_vianna.jpg" alt="Arthur Vianna - Estudante de Desenvolvimento web na Trybe" id="avatar" />
+        <h2><em>Estudante de Desenvolvimento Web na </em><img src="trybe_logo.png" id="trybe-logo"/></h2>
     </section>
-    <section id="header">
-        <h1>
-            Arthur Pedrosa Vianna - <em>Estudante de Desenvolvimento Web na </em>
-            <img src="trybe_logo.png" height="25px"/>
-        </h1>
-        <img src="foto_arthur_vianna.jpg" alt="Arthur Vianna - Estudante de Desenvolvimento web na Trybe" />
-        <hr/>
-    </section>
+    <hr/>
     <section id="description">
-        <h2>Uma Breve Descrição</h2>
+        <h3>Uma Breve Descrição</h3>
         <p>
             Fala galera, me chamo <b>Arthur Vianna</b>. <br>
             Nascido e criado em Brasília (apesar de ter tido um lapso de tempo morando nos EUA na minha infância). Tenho 25 anos e sou formado em engenharia civil 🏗 na Universidade de Brasília (UnB), mas acabei me apaixonando pela programação.  
         </p>
-        <br/>
     </section>
+    <hr/>
     <section id="skills">
-        <h2>Habilidades</h2>
+        <h3>Habilidades</h3>
         <ul>
             <li>Proatividade: busco sempre ir atrás de algo que possa ser melhorado 🙋</li>
             <li>Busca constante por aprendizado: tento todo dia aprender algo novo 📚</li>
             <li>Inglês: acabei morando um tempo nos Estados Unidos quando era criança e com isso fui alfabetizado na lingua inglesa 🗣</li>
             <li>Violão: Toco violão desde os meus 11 anos 🎶</li>
         </ul>
-        <br/>
     </section>
-    <section>
-        <h2>Links Relacionados</h2>
-        <ul>
-            <li><a href="https://blog.rocketseat.com.br/" target="_blank">Blog da RocketSeat 🚀</a></li>
+    <hr/>
+    <section id="related-links">
+        <h3>Links Relacionados</h3>
+        <ul class="related-links-list">
+            <li><a href="https://blog.rocketseat.com.br/" target="_blank" class="link-button">Blog da RocketSeat 🚀</a></li>
         </ul>
     </section>
+    <footer>
+        <p>Arthur Pedrosa Vianna - 2022</p>
+    </footer>
 </body>
 </html>
